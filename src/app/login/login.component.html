@@ -1,0 +1,28 @@
+<div class="imagen">
+    <div class="signin-content">
+        <mat-card>
+            <mat-card-content>
+                <form [formGroup]="formLogin" (ngSubmit)="onLogin()"> 
+                        <i class="material-icons">person</i> <br>
+                            <p>Iniciar Sesión</p> <hr>
+                        <mat-form-field class="full-width-input">
+                            <i class="material-icons">bubble_chart</i>
+                            <!-- <mat-error *ngIf="isFieldInvalid('email')"> -->
+                                Ingresa tu usuario
+                                <input matInput placeholder="Correo valido" formControlName="usuario" required>
+                                <!-- </mat-error> -->
+                        </mat-form-field> 
+                        <mat-form-field class="full-width-input">
+                            <i class="material-icons">enhanced_encryption</i>
+                            <!-- <mat-error *ngIf="isFieldInvalid('email')"> -->
+                                Ingresa tu contraseña
+                                <input matInput placeholder="Contraseña valida" formControlName="contrasena" required>
+                                <!-- </mat-error> -->
+                        </mat-form-field> <br>
+                            <button mat-raised-button type="submit" color="primary"
+                                [disabled]="this.formLogin.invalid" [routerLink]="['alta-insumos']">Iniciar sesión</button>
+                </form> 
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
